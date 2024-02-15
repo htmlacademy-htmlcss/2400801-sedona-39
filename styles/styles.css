@@ -14,10 +14,30 @@
   font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  color: #333333;
+
+  background-color: #f2f2f2;
+
+  margin: 0;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 /*header, navigation*/
@@ -42,12 +62,12 @@ body {
   font-size: 10px;
   line-height: 10px;
   color: #ffffff;
-  background-color: #7DB54F;
+  background-color: #7db54f;
   text-align: center;
 }
 
 .modal-open-button {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #756157;
 }
 
@@ -58,9 +78,9 @@ body {
 .hero {
   background-color: rgba(131, 179, 211, 0.2);
   background-image: url(../img/backgrounds/hero-divider.svg), url(../img/backgrounds/hero-background.jpg);
-  background-position: bottom, center;
+  background-position: left bottom, left top;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% auto, cover;
 }
 
 /*advantages, services */
@@ -71,6 +91,7 @@ body {
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+  color: #000000;
 }
 
 .secondary-description {
@@ -81,7 +102,11 @@ body {
 
 .dark-item {
   color: #ffffff;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
+}
+
+.dark-item .item-title {
+  color:#ffffff;
 }
 
 .light-item {
@@ -98,6 +123,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  color: #000000;
 }
 
 .item-description {
@@ -118,6 +144,8 @@ body {
   text-align: center;
 
   border-radius: 4px;
+
+  cursor: pointer;
 }
 
 .small-button-link {
@@ -132,6 +160,8 @@ body {
   text-transform: uppercase;
 
   border-radius: 4px;
+
+  cursor: pointer;
 }
 
 /*search*/
@@ -148,11 +178,13 @@ body {
   background-image: url(../img/backgrounds/subscribe-background.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
+
+  color: #ffffff;
 }
 
-.subscribe-title, .subscribe-description {
-  color: #ffffff;
+.index-subscribe .secondary-title {
+  color: inherit;
 }
 
 .subscribe-input::placeholder {
@@ -164,10 +196,15 @@ body {
 
 .subscribe-button {
   color: #ffffff;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
 }
 
 /*contacts*/
+
+.social-link, .developer-link {
+  color:#82b3d3;
+  text-decoration: none;
+}
 
 .phone-link {
   text-decoration: none;
@@ -184,7 +221,7 @@ body {
   background-color: #756157;
   background-image: url(../img/backgrounds/filters-background.jpg);
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   color:#ffffff;
 }
@@ -218,8 +255,20 @@ body {
   font-weight: 400;
 }
 
+.price-label {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.price-input::placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+
 .filter-button {
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   color: #ffffff;
 }
 
@@ -239,6 +288,12 @@ body {
 
 .sorting-select {
   font: inherit;
+  color: inherit;
+}
+
+.view-button {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*cards*/
@@ -267,11 +322,12 @@ body {
 }
 
 .card-favourite-button {
-  background-color: #82B3D3;
+  background-color: #82b3d3;
 }
 
 .in-favourite {
-  background-color: #7DB54F;
+  color: #ffffff;
+  background-color: #7db54f;
 }
 
 .card-rating-number {
@@ -286,10 +342,10 @@ body {
 .pagination-link {
   text-decoration: none;
   color: #ffffff;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
 }
 
 .current-link {
   color: #000000;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
