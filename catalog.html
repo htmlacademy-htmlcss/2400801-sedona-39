@@ -24,28 +24,28 @@
               <a class="main-nav-link" href="#">О Седоне</a>
             </li>
             <li class="main-nav-item">
-              <a class="main-nav-link active-link" title="Вы здесь">Гостиницы</a>
-            </li>
-          </ul>
-          <ul class="user-nav-list">
-            <li class="user-nav-item">
-              <a class="user-nav-link" href="#">
-                <span class="visually-hidden">Поиск по сайту</span>
-              </a>
-            </li>
-            <li class="user-nav-item">
-              <a class="user-nav-link" href="#">
-                <span class="visually-hidden">В избранном</span>
-                <span class="user-favourites-number">12</span>
-              </a>
-            </li>
-            <li class="user-nav-item">
-              <a class="user-nav-link modal-open-button small-button-link" href="#">Хочу сюда!</a>
+              <a class="main-nav-link active-nav-link" title="Вы здесь">Гостиницы</a>
             </li>
           </ul>
         </nav>
+        <ul class="user-nav-list">
+          <li class="user-nav-item">
+            <a class="user-nav-link" href="#">
+              <span class="visually-hidden">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="user-nav-item">
+            <a class="user-nav-link" href="#">
+              <span class="visually-hidden">В избранном</span>
+              <span class="user-favourites-number">12</span>
+            </a>
+          </li>
+          <li class="user-nav-item">
+            <a class="modal-open-button small-button-link" href="#">Хочу сюда!</a>
+          </li>
+        </ul>
       </header>
-      <main>
+      <main class="main-container">
         <header class="catalog-header">
           <h1 class="catalog-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
@@ -53,57 +53,64 @@
               <a class="breadcrumb-link" href="index.html">
                 <span class="visually-hidden">Главная страница</span>
               </a>
+            </li>
+            <li class="breadcrumb-item">
               <a class="breadcrumb-link">Гостиницы</a>
             </li>
           </ul>
           <section class="filters">
             <h2 class="visually-hidden">Фильтры</h2>
             <form class="filters-form" action="https://echo.htmlacademy.ru/" method="get">
-              <fieldset class="infrastructure-filter">
+              <fieldset class="infrastructure-filter fieldset-filter">
                 <legend class="filter-title">Инфраструктура:</legend>
                 <ul class="filter-list">
-                  <li>
+                  <li class="filter-item">
+                    <input class="filter-checkbox" id="swimming-pul" type="checkbox" name="infrastructure" value="swimming-pul">
                     <label for="swimming-pul">Бассейн</label>
-                    <input class="filter-checkbox" id="swimming-pul" type="checkbox" name="infrastructure"
-                      value="swimming-pul">
-                  </li>
-                  <li>
-                    <label for="parking">Парковка</label>
+                    </li>
+                  <li class="filter-item">
                     <input class="filter-checkbox" id="parking" type="checkbox" name="infrastructure" value="parking">
+                    <label for="parking">Парковка</label>
                   </li>
-                  <li>
-                    <label for="wi-fi">Wi-Fi</label>
+                  <li class="filter-item">
                     <input class="filter-checkbox" id="wi-fi" type="checkbox" name="infrastructure" value="wi-fi">
+                    <label for="wi-fi">Wi-Fi</label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="house-filter">
+              <fieldset class="house-filter fieldset-filter">
                 <legend class="filter-title">Тип жилья:</legend>
                 <ul class="filter-list">
-                  <li>
-                    <label for="hotel">Гостиница</label>
+                  <li class="filter-item">
                     <input class="filter-checkbox" id="hotel" type="radio" name="house" value="hotel">
+                    <label for="hotel">Гостиница</label>
                   </li>
-                  <li>
-                    <label for="motel">Мотель</label>
+                  <li class="filter-item">
                     <input class="filter-checkbox" id="motel" type="radio" name="house" value="motel">
+                    <label for="motel">Мотель</label>
                   </li>
-                  <li>
-                    <label for="apartments">Апартаменты</label>
+                  <li class="filter-item">
                     <input class="filter-checkbox" id="apartments" type="radio" name="house" value="apartments">
+                    <label for="apartments">Апартаменты</label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="price-filter">
+              <fieldset class="price-filter fieldset-filter">
                 <legend class="filter-title">Стоимость, ₽:</legend>
-                <label class="price-label" for="min-price">От</label>
-                <input class="price-input min-price" id="min-price" type="number" name="min-price" placeholder="0">
-                <label class="price-label" for="max-price">До</label>
-                <input class="price-input max-price" id="max-price" type="number" name="max-price" placeholder="9000">
+                <div class="price-container">
+                  <input class="price-input min-price" id="min-price" type="number" name="min-price" placeholder="0">
+                  <label class="price-label" for="min-price">От</label>
+                </div>
+                <div class="price-container">
+                  <input class="price-input max-price" id="max-price" type="number" name="max-price" placeholder="9000">
+                  <label class="price-label" for="max-price">До</label>
+                </div>
                 <!--range-slider-->
               </fieldset>
-              <button class="filter-button small-button-link" type="submit">Применить</button>
-              <button class="reset-filter-button small-button-link" type="reset">Сбросить</button>
+              <fieldset class="filter-buttons fieldset-filter">
+                <button class="filter-button small-button-link" type="submit">Применить</button>
+                <button class="reset-filter-button small-button-link" type="reset">Сбросить</button>
+              </fieldset>
             </form>
           </section>
         </header>
@@ -228,7 +235,7 @@
               <a class="pagination-link button-link" href="#">4</a>
             </li>
             <li class="pagination-item">
-              <span>...</span>
+              <span class="pagination-pass">...</span>
             </li>
             <li class="pagination-item">
               <a class="pagination-link button-link" href="#">10</a>
@@ -237,15 +244,16 @@
         </section>
       </main>
       <footer class="page-footer">
-        <article class="subscribe">
-          <h2 class="secondary-title">Подпишитесь на рассылку</h2>
-          <p class="secondary-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <section class="subscribe">
+          <h2 class="subscribe-title secondary-title">Подпишитесь на рассылку</h2>
+          <p class="subscribe-description secondary-description">Только полезная информация и никакого спама, честное
+            бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe">Введите ваш e-mail</label>
             <input class="subscribe-input" name="e-mail" id="subscribe" type="email" placeholder="Ваш e-mail" required>
             <button class="subscribe-button  button-link" type="submit">Подписаться</button>
           </form>
-        </article>
+        </section>
         <section class="contacts">
           <ul class="socials">
             <li class="social-item">
