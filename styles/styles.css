@@ -617,18 +617,20 @@ body {
 }
 
 .socials {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   min-width: 140px;
   gap: 7px;
   margin: 0;
-  padding: 0 3px;
+  padding: 0;
+
 
   list-style-type: none;
 }
 
 .social-link, .developer-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   color:#82b3d3;
   text-decoration: none;
@@ -637,13 +639,14 @@ body {
 .social-link {
   min-width: 40px;
   min-height: 40px;
+  padding: 6px;
 }
 
 .social-link::before {
   content: "";
   display: block;
-  min-width: 40px;
-  min-height: 40px;
+  min-width: 24px;
+  min-height: 17px;
 
   background-color: #82b3d3;
   mask-position: center center;
