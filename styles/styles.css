@@ -1535,7 +1535,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 88px;
-  row-gap: 48px;
+  row-gap: 23px;
 }
 
 .booking-fieldset {
@@ -1551,6 +1551,10 @@ body {
 
 .long-fieldset {
   grid-column: 1/-1;
+
+  display: grid;
+  grid-template-columns: auto 440px;
+  row-gap: 4px;
 }
 
 .booking-label {
@@ -1561,10 +1565,46 @@ body {
   font-weight: 700;
 }
 
+.booking-input-container {
+  position: relative;
+}
+
+.booking-input-container::after {
+  content: "";
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  width: 16px;
+  height: 15px;
+
+  background-image: url("../img/icons/icon-calendar.svg");
+  background-size: 16px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
 .booking-date {
   width: 440px;
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.booking-message {
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+  padding: 0 20px;
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.booking-error {
+  color: #ff5757;
 }
 
 .booking-guest-container {
@@ -1717,6 +1757,7 @@ body {
   grid-column: 1/-1;
   width: 100%;
   padding: 18px 50px;
+  margin-top: 25px;
 
   line-height: 24px;
   color: #ffffff;
