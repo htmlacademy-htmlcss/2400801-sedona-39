@@ -37,7 +37,7 @@
           </li>
           <li class="user-nav-item">
             <a class="user-nav-link user-nav-favourites" href="#">
-              <span class="visually-hidden">В избранном</span>
+              <span class="visually-hidden">Гостиниц в избранном</span>
               <span class="user-favourites-number">12</span>
             </a>
           </li>
@@ -263,7 +263,7 @@
       <footer class="page-footer">
         <section class="subscribe">
           <h2 class="subscribe-title secondary-title">Подпишитесь на рассылку</h2>
-          <p class="subscribe-description secondary-description">Только полезная информация и никакого спама, честное
+          <p class="subscribe-description secondary-description">Только полезная информация и никакого спама,<br>честное
             бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe">Введите ваш e-mail</label>
@@ -297,6 +297,7 @@
         </section>
       </footer>
     </div>
+    <!--Чтобы открыть модальное окно, добавьте класс modal-opened контейнеру с классом modal-container-->
     <div class="modal-container">
       <div class="modal modal-booking">
         <button class="modal-close-button" type="button">
@@ -304,7 +305,7 @@
         </button>
         <section class="modal-content">
           <h2 class="modal-title secondary-title">Поиск гостиницы в Седоне</h2>
-          <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="booking-form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="booking-fieldset long-fieldset">
               <label class="booking-label" for="arriving-date">Дата Заезда:</label>
               <input class="booking-date input" id="arriving-date" name="arriving-date" type="text" value="27 апреля 2020">
@@ -329,10 +330,9 @@
             <fieldset class="booking-fieldset">
               <legend class="visually-hidden">Количество детей</legend>
               <label class="booking-label" for="kids">Дети:</label>
-              <button class="tooltip-button" type="button">
-                <span class="visually-hidden">Показать дополнительную информацию</span>
+              <button class="tooltip-button" type="button" aria-labelledby="tooltip-info-kids">
               </button>
-              <div class="tooltip-container">
+              <div class="tooltip-container" role="tooltip" id="tooltip-info-kids">
                 <p class="tooltip-content">
                   Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
                 </p>
