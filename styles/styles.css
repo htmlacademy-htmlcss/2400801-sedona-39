@@ -618,9 +618,9 @@ body {
   background-color: #83b3d3;
 }
 
-/*contacts*/
+/*footer*/
 
-.contacts {
+.page-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -630,8 +630,8 @@ body {
 .socials {
   display: flex;
   flex-wrap: wrap;
-  min-width: 140px;
-  gap: 7px;
+  max-width: 140px;
+  gap: 10px;
   margin: 0;
   padding: 0;
 
@@ -689,7 +689,7 @@ body {
 .phone-link {
   display: block;
   width: max-content;
-  flex-shrink: 0;
+  padding-left: 10px;
 
   text-decoration: none;
   color: #000000;
@@ -708,9 +708,7 @@ body {
 }
 
 .developer-link {
-  min-width: 125px;
-  min-height: 43px;
-  padding: 5px;
+  padding: 5px 2px;
 }
 
 .developer-link::before {
@@ -737,7 +735,7 @@ body {
 /*catalog*/
 
 .catalog-header {
-  padding: 35px 70px 70px;
+  padding: 35px 70px 73px;
 
   color:#ffffff;
 
@@ -943,8 +941,18 @@ body {
   opacity: 0.3;
 }
 
+.filter-input:disabled {
+  cursor: default;
+}
+
 .filter-input:disabled ~ .filter-mark {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: default;
+}
+
+.filter-label:has(.filter-input:disabled) {
+  opacity: 0.3;
+  cursor: default;
 }
 
 .price-container {
@@ -958,6 +966,7 @@ body {
   width: 143px;
   padding-top: 12px;
   padding-bottom: 12px;
+  padding-right: 50px;
 
   appearance: textfield;
 }
@@ -1114,7 +1123,7 @@ body {
 
 .sorting-select {
   width: 292px;
-  padding: 12px 18px;
+  padding: 12px 50px 12px 18px;
 
   font: inherit;
   color: inherit;
@@ -1219,9 +1228,10 @@ body {
 .card-item {
   display: grid;
   grid-template-columns: 140px 140px;
+  grid-template-rows: auto 1fr;
   row-gap: 16px;
   column-gap: 20px;
-  padding: 18px;
+  padding: 19px;
 
   border: 1px solid #e6e6e6;
   border-radius: 4px;
@@ -1452,7 +1462,7 @@ body {
 
   display: none;
 
-  background-color: rgba(242, 242, 242, 0.6);
+  background-color: rgba(242, 242, 242, 0.8);
 }
 
 .modal-opened {
@@ -1534,7 +1544,7 @@ body {
 .booking-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 88px;
+  column-gap: 82px;
   row-gap: 23px;
 }
 
@@ -1572,7 +1582,7 @@ body {
 .booking-input-container::after {
   content: "";
   position: absolute;
-  right: 17px;
+  right: 20px;
   top: 50%;
   transform: translate(0, -50%);
 
@@ -1590,6 +1600,7 @@ body {
   width: 440px;
   padding-top: 12px;
   padding-bottom: 12px;
+  padding-right: 50px;
 }
 
 .booking-message {
@@ -1716,9 +1727,9 @@ body {
 .tooltip-container {
   position: absolute;
   top: calc(100% + 4px);
-  left: -56px;
+  left: -51px;
   display: none;
-  padding: 15px 18px 18px 22px;
+  padding: 22px 18px 21px 22px;
 
   color: #ffffff;
 
