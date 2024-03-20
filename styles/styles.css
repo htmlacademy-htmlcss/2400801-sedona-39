@@ -689,6 +689,7 @@ body {
 .phone-link {
   display: block;
   width: max-content;
+  max-width: 600px;
   padding-left: 10px;
 
   text-decoration: none;
@@ -914,7 +915,7 @@ body {
   display: none;
 
   border-radius: 50%;
-  background-color: #3F5E72;
+  background-color: #3f5e72;
 }
 
 .filter-input[type="radio"]:checked ~ .filter-mark::before {
@@ -1418,6 +1419,7 @@ body {
 
 .pagination-link {
   min-width: 60px;
+  width: auto;
   padding: 12px;
 
   text-decoration: none;
